@@ -4,6 +4,7 @@
 
 This is a Pig Latin converter that demonstrates the basic structure of a Python package.
 
+<remote change>
 ## Installation
 
 ### For regular users

@@ -1,0 +1,74 @@
+[project]
+name = "pig-latin"
+version = "0.0.1"
+
+# Optional descriptive information for the project.
+description = "The Pig Latin Package"
+keywords = ['pig', 'latin', 'package', 'python', 'demo']
+
+readme = "README.md"
+
+# Fill in authors and maintainers here.
+authors = [
+    {name = "<username>", email = "user@domain.com"},
+]
+maintainers = [
+    {name = "<username>", email = "user@domain.com"},
+]
+
+# Optional classifications.
+# See: https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+
+# Python version and dependencies
+requires-python = ">=3.10"
+dependencies = [
+    # TODO: Fill in dependencies here.
+]
+
+[project.optional-dependencies]
+# Regular development dependencies.
+dev = [
+    "black >= 24.10.0",
+    "pylint >= 3.3.1",
+    "pytest >= 8.3.3",
+]
+
+[project.urls]
+# URL of the GitHub repository.
+repository = "https://github.com/<username>/pig-latin"
+
+[build-system]
+# Using setuptools as build backend.
+requires = ["setuptools >= 75.6.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+# Place package source code in src folder.
+where = ["src"]
+
+
+# Pylint settings.
+# To generate an example: `pylint --generate-toml-config > pylint_example.toml`
+
+[tool.pylint.main]
+# Set number of concurrent jobs, use 0 to autodetect.
+jobs=0
+
+[tool.pylint.basic]
+# Good variable names which should always be accepted.
+good-names = ["X", "y", "df", "e", "n"]
+
+[tool.pylint.format]
+# Maximum characters on a single line (same as black).
+max-line-length = 88
+
+[tool.pylint.messages_control]
+# List of messages or message categories to ignore.
+disable = ["logging-fstring-interpolation"]
